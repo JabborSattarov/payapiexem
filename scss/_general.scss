@@ -1,0 +1,41 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    background: #EDF3F8;
+    font-family:$dFont ;
+    z-index: 11;
+    margin: 0;
+    padding: 0;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .navbar__btn{
+    position: absolute;
+    right: 0;
+    padding: 10px 15px;
+    background-color: $Dpink;
+    color: white;
+    text-decoration: none;
+    border-radius: 24px;
+    &:active{
+        background-color: $Dactive;
+        color: rgba(255, 255, 255, 0.522);
+    }
+}

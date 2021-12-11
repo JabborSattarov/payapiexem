@@ -1,0 +1,112 @@
+.collab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 472px;
+    background-color: rgb(49, 48, 45);
+    &__desk {
+        width: 50%;
+        padding: 80px 100px;
+        color: #fff;
+        &__title {
+            font-size: 48px;
+            line-height: 56px;
+            font-family: 'DM Serif Display';
+        }
+        &__text {
+            width: 445px;
+            line-height: 28px;
+            font-size: 15px;
+            opacity: 70%;
+            margin-top: 30px;
+        }
+        &__button {
+            width: 129px;
+            height: 48px;
+            border-radius: 24px;
+            background-color: inherit;
+            border: 1px solid white;
+            font-weight: 700;
+            color: white;
+            margin-top: 30px;
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+                color: black;
+                transition: 1s ease-in-out;
+            }
+        }
+       
+    }
+    &__img {
+        display: flex;
+        flex-wrap: wrap;
+        width: 510px;
+        height: 300px;
+        margin-right: auto;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}
+@media screen and (max-width: 768px) {
+    .collab {
+        flex-direction: column-reverse;
+        height: 615px;
+        &__desk {
+            padding: 0;
+            &__title {
+                width: 457px;
+                text-align: center;
+            }
+            &__text {
+                width: 456px;
+                height: 112px;
+                text-align: center;
+            }
+            &__button {
+                margin-left: 160px;
+                margin-bottom: 20px;
+            }
+           
+        }
+        &__img {
+           margin-left: 150px;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .collab {
+        flex-direction: column-reverse;
+        width: 200vw;
+        height: 670px;
+        &__desk {
+            width: 50%;
+            padding: 0;
+            color: #fff;
+            &__title {
+                width: 327px;
+                height: 36px;
+                font-size: 32px;
+                line-height: 36px;
+                font-family: 'DM Serif Display';
+                margin-left: 50px;
+            }
+            &__text {
+                width: 327px;
+                height: 140px;
+                margin-left: 50px;
+                margin-top: 15px;
+            }
+           
+        }
+        &__img {
+            display: flex;
+            flex-wrap: wrap;
+            width: 270px;
+            height: 400px;
+    
+        }
+    }
+}
