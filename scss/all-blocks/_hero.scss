@@ -1,60 +1,159 @@
-.main{
-    .hero{
-        position: relative;
-        margin: 100px 0px;
-        
-        &__h1{
-            width: 400px;
-            font-size: 50px;
-            font-family:$elesFont;
-            color: $linkcolor;
-            vertical-align: middle;
-           
-        }
-        &__form{
-            
-            width: 445px;
-            position: relative;
-            &__inp{
-                width: 445px;
-                padding:12px 15px;
-                border-radius: 24px;
-                border: none;
-                position: relative;
-               
-            }
-        }
-        &__p{
-            color:$linkcolor;
-            &__span{
-                font-weight: 700;
-            }
-        }
+.hero {
+    
+    margin: 0 auto;
+    display: flex;
+    padding: 10px 35px;
+    
 
-    }
-}
-// tablet devices
-@media (max-width:768px){
-    .main{
-            flex-direction: column;
-            .hero{
-                height: 500px;
-                margin-top: 500px;
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                &__h1{
-                    width: 80%;
-                    margin: 0 auto;
-                    text-align: center;
-            
-                }
-                &__form{
-                    margin: 0 auto;
-                }
-                &__p{
-                    text-align: center;
+
+   
+    &__card {
+        width: 45%;
+       
+       
+        &__title {
+            width: 100%;
+            font-family:$elesFont;
+            font-weight: normal; 
+            font-size: 72px;
+            line-height: 72px;
+            color: #36536B;
+        }
+        form {
+            background: #FBFCFE;
+            box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+            border-radius: 24px;
+            position: relative;
+            padding: 10px;
+            margin-right: 50px;
+            width: 420px;
+            display: flex;
+            align-items: center;
+            input {
+                background: inherit;
+                border: none;
+            }
+            .btn {
+                position: absolute;
+                right: 0;
+                border:none ;
+                padding: 10px 15px;
+                background-color: $Dpink;
+                color: white;
+                border-radius: 24px;
+                box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+                border-radius: 24px;
+               
+                &:active {
+                    background-color: $Dactive;
+                    color: rgba(255, 255, 255, 0.522);
                 }
             }
+        &:hover, &:active {
+            box-shadow: 0 0 10px white
+        }
+        
+        }
+        &__question {
+            font-family: $dFont;
+            font-weight: normal;
+            color: #6C8294;
+        }
+    }
+    
+}
+//table 
+ @media (max-width: 978px) {
+    .hero {
+        padding-top: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+   
+        
+        &__card{
+            
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            // position: relative;
+       
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: 0;
+            //     text-align: center;
+            //     width: 100%;
+            //     height: 550px;
+            //     background: url(../../img/phone3.png) no-repeat;
+            //     background-size: 350px;
+            //     background-position: center center;
+    
+            //     z-index: -1;
+                
+                  
+            // }
+            &__title{
+                width: 70%;
+                margin: 0px auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-size: 42px;
+            }
+        }
+       
+    }
+}  
+// mobile
+@media (max-width: 762px) {
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        // position: relative;
+       
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: 100%;
+        //     text-align: center;
+        //     width: 100%;
+        //     height: 550px;
+        //     background: url(../../img/phone3.png) no-repeat;
+        //     background-size: 350px;
+        //     background-position: center center;
+
+        //     z-index: -1;
+            
+              
+        // }   
+        
+        &__card{
+            
+            padding: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            &__title{
+                width: 70%;
+                margin: 0px auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                text-align: center;
+                font-size: 32px;
+            }
+            form{
+                margin: 0 auto;
+            }
+        }
+       
     }
 }

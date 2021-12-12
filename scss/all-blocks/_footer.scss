@@ -1,58 +1,93 @@
-.footer {
-    position: relative;
-    margin-top: 20px;
-    
-    
+.footer{
     background-color: $workbg;
-    .navbar{
-       position: relative;
+    .footbar{
+        width: 100%;
+        position: relative;
         display: flex;
-        
         align-items: center;
-
-        &__toggle{
-            display: none;
+        
+        &__logo{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
         &__nav{
             display: flex;
-            min-width: 100px;
             &__item{
-                padding:0px 15px;
+                padding: 5px 10px ;
                 list-style: none;
                 .item__a{
                     text-decoration: none;
-                    display: flex;
                     color: $linkcolor;
-                    font-weight: 700;
+                    font-weight: 900;
                     &:active{
-                        color:$linkhover;
+                        color: $linkhover;
                     }
-                    
                 }
             }
         }
-        &__svg{
-            width: 200px;
+        &__net{
+           
             position: absolute;
-            right: 0;
+            right: 10px;
             display: flex;
-            justify-content: space-around;
-
+            align-items: center;
+            justify-content: space-between;
+            &__link{
+                padding: 10px;
+            }
         }
 
     }
-
 }
+@media (max-width:762px) {
+    .footbar{
+       
+        display: flex;
+        align-items: center;
+        justify-content: c;
+        flex-direction: column;
+        
+        &__logo{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &__nav{
+            padding: 40px;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            &__item{
+                padding: 15px 20px ;
+                list-style: none;
+                .item__a{
+                    text-decoration: none;
+                    color: $linkcolor;
+                    font-weight: 900;
+                    &:active{
+                        color: $linkhover;
+                    }
+                }
+            }
+        }
+        &__net{
+           
+            width: 200px;
+            left: 38%;
+            position: absolute;
+            bottom: 0;
 
-// tablet
-@media (max-width: 768px) and (min-width: 481px){
-    
- }
-//  mobile
-// @media (max-width:480px){
-//     .footer{
-//         .navbar{
-            
-//         }
-//     }    
-// }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &__link{
+                padding: 10px;
+                &:active{
+                    color: crimson;
+                }
+            }
+        }
+
+    }
+}
